@@ -3,3 +3,5 @@ obj/
 .vs/
 appsettings.Development.json
 *.user
+# App settings sensíveis
+appsettings.Development.json
