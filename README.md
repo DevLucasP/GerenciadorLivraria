@@ -31,26 +31,26 @@ validações de dados e documentação.
 ---
 ## Estrutura do projeto
 
-GerenciadorLivraria
+GerenciadorLivraria/
 │
-├── Controllers
+├── Controllers/
 │   └── BooksController.cs
 │
-├── Data
+├── Data/
 │   └── GerenciadorLivrariaDbContext.cs
 │
-├── Models
+├── Models/
 │   └── Livro.cs
 │
-├── Dtos
+├── Dtos/
 │   └── UpdateLivroDto.cs
 │
-├── Enums
+├── Enums/
 │   └── GeneroLivro.cs
 │
 ├── Program.cs
-└── appsettings.json
-
+├── appsettings.json
+└── README.md
 
 ##  Modelo de Dados
 
