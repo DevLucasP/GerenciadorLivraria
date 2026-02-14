@@ -3,6 +3,20 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("LiberarFrontend",
+        policy =>
+        {
+            policy
+                .AllowAnyOrigin()   // libera qualquer origem (teste)
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        });
+});
+
+builder.Services.AddControllers();
+
 // Add services to the container.
 //Conexão ao banco de dados 
 builder.Services.AddDbContext<GerenciadorLivrariaDbContext>(options =>
@@ -30,6 +44,8 @@ builder.Services.AddSwaggerGen(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
+app.UseCors("LiberarAcessoFrontend");
 
 app.UseSwagger();
 app.UseSwaggerUI();
